@@ -7,7 +7,7 @@
 <p>💲 The world's most trusted currency converter app</p> 
 </div>
 
-Click this link to view <a href="https://currence.netlify.app">Curencee</a>
+Click this link to view <a href="https://currencee.netlify.app">Curencee</a>
 
 <img src="https://user-images.githubusercontent.com/62628408/175772278-6f42e8c1-2f97-45bd-b122-52463fd99321.png" alt="Rocketmeme Preview">
 
