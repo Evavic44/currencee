@@ -1,16 +1,82 @@
 @import "variables";
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 80vh;
-  background: $bgLight;
-  font-family: $fontPrimaryReg, $fontDefault;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-family: $fontBold, $fontDefault;
-  font-size: 4rem;
+body {
+  font-family: $fontSecondary;
+  background: $bgLight;
 }
+
+p {
+  font-weight: 300;
+  color: #222;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Hero Content
+.content {
+  h1 {
+    font-family: $fontPrimary;
+    font-size: 3.3rem;
+    letter-spacing: -0.3px;
+    line-height: 4.1rem;
+    margin-bottom: 1.5rem;
+    transition: 0.2s ease-in-out;
+  }
+
+  & > p {
+    font-weight: 500;
+    line-height: 1.6rem;
+  }
+
+  .logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    margin: 1rem 0;
+  }
+
+  .stats {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .rating {
+      margin-right: 10rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+// Converter

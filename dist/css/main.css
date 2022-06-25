@@ -4,31 +4,73 @@
   font-weight: 700;
   src: url(../assets/font/CanelaDeck.woff2);
 }
-@font-face {
-  font-family: "Tenon Regular";
-  font-style: normal;
-  font-weight: 700;
-  src: url(../assets/font/TenonRegular.woff);
-}
-@font-face {
-  font-family: "Tenon Medium";
-  font-style: normal;
-  font-weight: 700;
-  src: url(../assets/font/TenonMedium.woff);
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 80vh;
-  background: #e5e9fe;
-  font-family: "Tenon Medium", Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Canela Deck", Arial, Helvetica, sans-serif;
-  font-size: 4rem;
+body {
+  font-family: "Inter", sans-serif;
+  background: #e5e9fe;
+}
+
+p {
+  font-weight: 300;
+  color: #222;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+@media (max-width: 1000px) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content h1 {
+  font-family: "Canela Deck";
+  font-size: 3.3rem;
+  letter-spacing: -0.3px;
+  line-height: 4.1rem;
+  margin-bottom: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+.content > p {
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+.content .logo {
+  margin-bottom: 1.5rem;
+}
+.content .icon {
+  margin: 1rem 0;
+}
+.content .stats {
+  display: flex;
+  align-items: center;
+}
+.content .stats h2 {
+  font-size: 2rem;
+}
+.content .stats p {
+  font-size: 0.8rem;
+}
+.content .stats .rating {
+  margin-right: 10rem;
+}
+@media (max-width: 900px) {
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
