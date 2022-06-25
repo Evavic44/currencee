@@ -1,26 +1,5 @@
 @import "variables";
 
-@font-face {
-  font-family: "Canela Deck";
-  font-style: normal;
-  font-weight: 700;
-  src: url(/dist/assets//font/CanelaDeck.woff2);
-}
-
-@font-face {
-  font-family: "Tenon Regular";
-  font-style: normal;
-  font-weight: 700;
-  src: url(/dist/assets//font/TenonRegular.woff);
-}
-
-@font-face {
-  font-family: "Tenon Medium";
-  font-style: normal;
-  font-weight: 700;
-  src: url(/dist/assets//font/TenonMedium.woff);
-}
-
 body {
   display: flex;
   align-items: center;
@@ -28,10 +7,10 @@ body {
   text-align: center;
   height: 80vh;
   background: $bgLight;
-  font-family: $fontPrimaryReg;
+  font-family: $fontPrimaryReg, $fontDefault;
 }
 
 h1 {
-  font-family: $fontBold;
+  font-family: $fontBold, $fontDefault;
   font-size: 4rem;
 }

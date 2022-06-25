@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Canela Deck";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/CanelaDeck.woff2);
+}
+
+@font-face {
+  font-family: "Tenon Regular";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/TenonRegular.woff);
+}
+
+@font-face {
+  font-family: "Tenon Medium";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/TenonMedium.woff);
+}
+
 // Colors
 $primaryColor: #8896ceff;
 $secondaryColor: #191136ff;
@@ -6,6 +27,7 @@ $bgDark: #000000ff;
 $white: #ffffffff;
 
 // Font
+$fontDefault: Arial, Helvetica, sans-serif;
 $fontBold: "Canela Deck";
 $fontPrimaryReg: "Tenon Regular";
-$fontPrimaryMed: "Tenon Medium";
+$fontPrimaryReg: "Tenon Medium";
