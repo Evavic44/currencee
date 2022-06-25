@@ -9,6 +9,8 @@
 
 Click this link to view <a href="https://currencee.netlify.app">Curencee</a>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f7c5c576-f1b4-40f9-ba1b-6a39ec0ffa1d/deploy-status)](https://app.netlify.com/sites/currencee/deploys)
+
 <img src="https://user-images.githubusercontent.com/62628408/175772278-6f42e8c1-2f97-45bd-b122-52463fd99321.png" alt="Rocketmeme Preview">
 
 
