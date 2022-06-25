@@ -1,5 +1,34 @@
+@font-face {
+  font-family: "Canela Deck";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/CanelaDeck.woff2);
+}
+@font-face {
+  font-family: "Tenon Regular";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/TenonRegular.woff);
+}
+@font-face {
+  font-family: "Tenon Medium";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/dist/assets//font/TenonMedium.woff);
+}
 body {
-  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+  background: #e5e9fe;
+  font-family: "Tenon Regular";
+}
+
+h1 {
+  font-family: "Canela Deck";
+  font-size: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */
