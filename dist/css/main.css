@@ -27,7 +27,8 @@ p {
   grid-template-columns: repeat(2, 1fr);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 3rem 3rem;
+  padding: 0 3rem 3rem;
+  margin-top: -1rem;
 }
 @media (max-width: 1000px) {
   #hero {
@@ -51,7 +52,7 @@ p {
   line-height: 1.6rem;
 }
 .content .logo {
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.7rem;
 }
 .content .icon {
   margin: 1rem 0;
@@ -74,6 +75,50 @@ p {
     font-size: 2.5rem;
     line-height: 3rem;
   }
+}
+
+.converter {
+  padding: 7rem 2rem;
+}
+.converter form {
+  background: white;
+  min-height: 500px;
+  border-radius: 5px;
+}
+.converter form label {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.converter form input,
+.converter form option {
+  font-family: "Inter", sans-serif;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+.converter form .value {
+  padding: 2rem;
+  border-bottom: 1px solid #f4f4f4;
+}
+.converter form .value > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.converter form .value > div a {
+  transform: translateY(-7px);
+}
+.converter form .value input {
+  width: 100%;
+  padding: 1rem 1.3rem;
+  font-size: 1.5rem;
+}
+.converter form .value input:focus {
+  border: 1px solid #8896ce;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+.converter .conversions {
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
