@@ -18,6 +18,10 @@ p {
   color: #222;
 }
 
+.highlight {
+  color: $primaryColor;
+}
+
 #hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -83,11 +87,10 @@ p {
 
 // Converter
 .converter {
-  padding: 7rem 2rem;
+  padding: 6rem 2rem;
 
   form {
     background: $white;
-    min-height: 500px;
     border-radius: $radius;
 
     label {
@@ -130,7 +133,52 @@ p {
     }
   }
 
-  .conversions {
-    padding: 2rem;
+  .convertOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem;
+    border-bottom: 1px solid #f4f4f4;
+
+    .selectContanier {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid $inputColor;
+      border-radius: 3px;
+      padding: 0.8rem;
+    }
+  }
+
+  .exchangeRate {
+    padding: 1.3rem 1.5rem;
+    text-align: center;
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .result {
+      font-size: 3rem;
+      color: #444;
+    }
+  }
+  .flags {
+    border-radius: 50%;
+  }
+
+  .convertBtn {
+    font-family: $fontPrimary;
+    display: inline-block;
+    width: 100%;
+    padding: 1.2rem;
+    text-align: center;
+    border: none;
+    transition: $transition;
+    background: $secondaryColor;
+    color: $white;
+    font-size: 1.3rem;
+    cursor: pointer;
   }
 }

@@ -22,6 +22,10 @@ p {
   color: #222;
 }
 
+.highlight {
+  color: #8896ce;
+}
+
 #hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -78,11 +82,10 @@ p {
 }
 
 .converter {
-  padding: 7rem 2rem;
+  padding: 6rem 2rem;
 }
 .converter form {
   background: white;
-  min-height: 500px;
   border-radius: 5px;
 }
 .converter form label {
@@ -117,8 +120,48 @@ p {
   outline: none;
   transition: 0.3s ease-in-out;
 }
-.converter .conversions {
-  padding: 2rem;
+.converter .convertOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f4f4f4;
+}
+.converter .convertOptions .selectContanier {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  padding: 0.8rem;
+}
+.converter .exchangeRate {
+  padding: 1.3rem 1.5rem;
+  text-align: center;
+}
+.converter .exchangeRate p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.converter .exchangeRate .result {
+  font-size: 3rem;
+  color: #444;
+}
+.converter .flags {
+  border-radius: 50%;
+}
+.converter .convertBtn {
+  font-family: "Canela Deck";
+  display: inline-block;
+  width: 100%;
+  padding: 1.2rem;
+  text-align: center;
+  border: none;
+  transition: 0.3s ease-in-out;
+  background: #191136;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
