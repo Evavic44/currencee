@@ -37,6 +37,12 @@ p {
 @media (max-width: 1000px) {
   #hero {
     grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+@media (max-width: 768px) {
+  #hero {
+    padding: 0 2rem 3rem;
   }
 }
 
@@ -74,29 +80,54 @@ p {
 .content .stats .rating {
   margin-right: 10rem;
 }
+@media (max-width: 1100px) {
+  .content h1 {
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .content h1 {
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    max-width: 800px;
+  }
+}
 @media (max-width: 900px) {
   .content h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 3rem;
+    max-width: default;
   }
 }
 
 .converter {
   padding: 6rem 2rem;
+  width: 550px;
+}
+@media (max-width: 1000px) {
+  .converter {
+    padding: 6rem 0;
+  }
+}
+@media (max-width: 800px) {
+  .converter {
+    width: 100%;
+  }
 }
 .converter form {
   background: white;
   border-radius: 5px;
+  box-shadow: -220px 60px 200px -100px rgba(136, 150, 206, 0.7);
 }
 .converter form label {
   display: block;
   margin-bottom: 0.7rem;
 }
 .converter form input,
-.converter form option {
+.converter form select {
   font-family: "Inter", sans-serif;
-  border: 1px solid #eaeaea;
-  border-radius: 5px;
+  background-color: white;
 }
 .converter form .value {
   padding: 2rem;
@@ -114,6 +145,8 @@ p {
   width: 100%;
   padding: 1rem 1.3rem;
   font-size: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
 }
 .converter form .value input:focus {
   border: 1px solid #8896ce;
@@ -127,13 +160,42 @@ p {
   padding: 1.5rem;
   border-bottom: 1px solid #f4f4f4;
 }
+.converter .convertOptions .baseCurrency,
+.converter .convertOptions .foreignCurrency {
+  width: 130px;
+}
+.converter .convertOptions .convertIcon {
+  margin-top: 2rem;
+}
 .converter .convertOptions .selectContanier {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border: 1px solid #eaeaea;
-  border-radius: 3px;
-  padding: 0.8rem;
+  border-radius: 200px;
+  padding: 0.2rem;
+}
+.converter .convertOptions .selectContanier .select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+.converter .convertOptions .selectContanier .select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+.converter .convertOptions .selectContanier .select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.converter .convertOptions .selectContanier select {
+  border: none;
+  padding: 0.4rem;
+  width: 60px;
+  height: 100%;
+  cursor: pointer;
+}
+.converter .convertOptions .selectContanier .flags {
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 .converter .exchangeRate {
   padding: 1.3rem 1.5rem;
@@ -146,9 +208,6 @@ p {
 .converter .exchangeRate .result {
   font-size: 3rem;
   color: #444;
-}
-.converter .flags {
-  border-radius: 50%;
 }
 .converter .convertBtn {
   font-family: "Canela Deck";

@@ -32,6 +32,11 @@ p {
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem 3rem;
   }
 }
 
@@ -77,10 +82,26 @@ p {
     }
   }
 
+  @media (max-width: 1100px) {
+    h1 {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+      max-width: 800px;
+    }
+  }
+
   @media (max-width: 900px) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       line-height: 3rem;
+      max-width: default;
     }
   }
 }
@@ -88,10 +109,20 @@ p {
 // Converter
 .converter {
   padding: 6rem 2rem;
+  width: 550px;
+
+  @media (max-width: 1000px) {
+    padding: 6rem 0;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 
   form {
     background: $white;
     border-radius: $radius;
+    box-shadow: -220px 60px 200px -100px rgba(136, 150, 206, 0.7);
 
     label {
       display: block;
@@ -99,10 +130,9 @@ p {
     }
 
     input,
-    option {
+    select {
       font-family: $fontSecondary;
-      border: 1px solid $inputColor;
-      border-radius: $radius;
+      background-color: $white;
     }
 
     .value {
@@ -123,6 +153,8 @@ p {
         width: 100%;
         padding: 1rem 1.3rem;
         font-size: 1.5rem;
+        border: 1px solid $inputColor;
+        border-radius: $radius;
 
         &:focus {
           border: 1px solid $primaryColor;
@@ -140,13 +172,47 @@ p {
     padding: 1.5rem;
     border-bottom: 1px solid #f4f4f4;
 
+    .baseCurrency,
+    .foreignCurrency {
+      width: 130px;
+    }
+
+    .convertIcon {
+      margin-top: 2rem;
+    }
+
     .selectContanier {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
       border: 1px solid $inputColor;
-      border-radius: 3px;
-      padding: 0.8rem;
+      border-radius: 200px;
+      padding: 0.2rem;
+
+      .select-box select::-webkit-scrollbar {
+        width: 8px;
+      }
+      .select-box select::-webkit-scrollbar-track {
+        background: #fff;
+      }
+      .select-box select::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+        border-right: 2px solid #ffffff;
+      }
+
+      select {
+        border: none;
+        padding: 0.4rem;
+        width: 60px;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .flags {
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
     }
   }
 
@@ -163,9 +229,6 @@ p {
       font-size: 3rem;
       color: #444;
     }
-  }
-  .flags {
-    border-radius: 50%;
   }
 
   .convertBtn {
