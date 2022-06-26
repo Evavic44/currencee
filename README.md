@@ -3,16 +3,15 @@
 </div>
 
 <div align="center">
-<h1>Curencee</h1>
+<h1>Currencee</h1>
 <p>💲 The world's most trusted currency converter app</p> 
 </div>
-
-Click this link to view <a href="https://currencee.netlify.app">Curencee</a>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f7c5c576-f1b4-40f9-ba1b-6a39ec0ffa1d/deploy-status)](https://app.netlify.com/sites/currencee/deploys)
 
 <img src="https://user-images.githubusercontent.com/62628408/175772278-6f42e8c1-2f97-45bd-b122-52463fd99321.png" alt="Rocketmeme Preview">
 
+![color-code](https://user-images.githubusercontent.com/62628408/175804516-396f7023-cc61-4cdd-8112-cfcd8e372ff1.png)
 
 ## 🔐 License
 
@@ -23,4 +22,3 @@ This project is protected by <a href="https://github.com/Evavic44/curencee/blob/
 </a>
 
 If you like this project, kindly star ⭐ and share this project.
-
