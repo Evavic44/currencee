@@ -60,6 +60,8 @@ exchangeIcon.addEventListener("click", () => {
   let tempCode = base.value;
   base.value = foreign.value;
   foreign.value = tempCode;
+  loadFlag(base);
+  loadFlag(foreign);
   getExchangeRate();
 });
 
@@ -74,7 +76,7 @@ function getExchangeRate() {
   }
 
   // Loading Icon
-  exchangeRateText.innerText = `🪙`;
+  exchangeRateText.innerText = `⭕`;
   let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${base.value}`;
   fetch(url)
     .then((response) => response.json())
@@ -84,5 +86,8 @@ function getExchangeRate() {
       const exchangeRateText = document.querySelector(".result");
       // exchangeRateText.innerText = `${amountVal} ${base.value} = ${totalExchangeRate} ${foreign.value}`; // 1 USD = 414.27 NGN
       exchangeRateText.innerText = `${totalExchangeRate} ${foreign.value}`; // 414.27 NGN
+    })
+    .catch(() => {
+      exchangeRateText.innerText = "Something went wrong..";
     });
 }
