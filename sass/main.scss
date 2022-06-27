@@ -14,7 +14,8 @@ body {
   color: $textDark;
 }
 
-p {
+p,
+a {
   font-weight: 300;
   color: $textGrey;
 }
@@ -241,10 +242,39 @@ p {
     padding: 1.2rem;
     text-align: center;
     border: none;
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
     transition: $transition;
     background: $secondaryColor;
     color: $white;
     font-size: 1.3rem;
     cursor: pointer;
+
+    &:hover {
+      background: rgb(25, 17, 64);
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 1.1rem;
+
+  a:hover {
+    color: $secondaryColor;
+  }
+
+  .social {
+    display: flex;
+    margin: 1rem 0;
+
+    a {
+      margin: 0 0.5rem;
+    }
   }
 }

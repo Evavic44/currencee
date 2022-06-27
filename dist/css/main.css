@@ -18,7 +18,8 @@ body {
   color: #222;
 }
 
-p {
+p,
+a {
   font-weight: 300;
   color: #555;
 }
@@ -219,11 +220,36 @@ p {
   padding: 1.2rem;
   text-align: center;
   border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   transition: 0.3s ease-in-out;
   background: #191136;
   color: white;
   font-size: 1.3rem;
   cursor: pointer;
+}
+.converter .convertBtn:hover {
+  background: rgb(25, 17, 64);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 1.1rem;
+}
+.footer a:hover {
+  color: #191136;
+}
+.footer .social {
+  display: flex;
+  margin: 1rem 0;
+}
+.footer .social a {
+  margin: 0 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
