@@ -55,13 +55,13 @@ getButton.addEventListener("click", (e) => {
   getExchangeRate();
 });
 
-// const exchangeIcon = document.querySelector(".value .convertIcon");
-// exchangeIcon.addEventListener("click", () => {
-//   let tempCode = base.value;
-//   base.value = foreign.value;
-//   foreign.value = tempCode;
-//   getExchangeRate();
-// });
+const exchangeIcon = document.querySelector(".formContainer .convertIcon");
+exchangeIcon.addEventListener("click", () => {
+  let tempCode = base.value;
+  base.value = foreign.value;
+  foreign.value = tempCode;
+  getExchangeRate();
+});
 
 function getExchangeRate() {
   const amount = document.querySelector(".value input"),
