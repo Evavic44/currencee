@@ -32,26 +32,57 @@ for (let i = 0; i < convertOptions.length; i++) {
     let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
     convertOptions[i].insertAdjacentHTML("beforeend", optionTag);
   }
+  convertOptions[i].addEventListener("change", (e) => {
+    loadFlag(e.target);
+  });
 }
+
+function loadFlag(element) {
+  for (code in country_code) {
+    if (code == element.value) {
+      let imgTag = element.parentElement.querySelector("img");
+      imgTag.src = `https://flagcdn.com/h20/${country_code[code]}.png`;
+    }
+  }
+}
+
+window.addEventListener("load", () => {
+  getExchangeRate();
+});
 
 getButton.addEventListener("click", (e) => {
   e.preventDefault();
   getExchangeRate();
 });
 
+// const exchangeIcon = document.querySelector(".value .convertIcon");
+// exchangeIcon.addEventListener("click", () => {
+//   let tempCode = base.value;
+//   base.value = foreign.value;
+//   foreign.value = tempCode;
+//   getExchangeRate();
+// });
+
 function getExchangeRate() {
-  const amount = document.querySelector(".value input");
+  const amount = document.querySelector(".value input"),
+    exchangeRateText = document.querySelector(".result");
   let amountVal = amount.value;
 
   if (amountVal == "" || amountVal == "0") {
     amount.value = "300";
     amountVal = 300;
   }
+
+  // Loading Icon
+  exchangeRateText.innerText = `🪙`;
   let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${base.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
       let exchangeRate = result.conversion_rates[foreign.value];
-      console.log(exchangeRate);
+      let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+      const exchangeRateText = document.querySelector(".result");
+      // exchangeRateText.innerText = `${amountVal} ${base.value} = ${totalExchangeRate} ${foreign.value}`; // 1 USD = 414.27 NGN
+      exchangeRateText.innerText = `${totalExchangeRate} ${foreign.value}`; // 414.27 NGN
     });
 }

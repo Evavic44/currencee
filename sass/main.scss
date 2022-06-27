@@ -11,11 +11,12 @@
 body {
   font-family: $fontSecondary;
   background: $bgLight;
+  color: $textDark;
 }
 
 p {
   font-weight: 300;
-  color: #222;
+  color: $textGrey;
 }
 
 .highlight {
@@ -122,7 +123,7 @@ p {
   form {
     background: $white;
     border-radius: $radius;
-    box-shadow: -220px 60px 200px -100px rgba(136, 150, 206, 0.7);
+    box-shadow: -220px 60px 250px -100px rgba(136, 150, 206, 0.7);
 
     label {
       display: block;
@@ -155,6 +156,7 @@ p {
         font-size: 1.5rem;
         border: 1px solid $inputColor;
         border-radius: $radius;
+        color: #333;
 
         &:focus {
           border: 1px solid $primaryColor;
@@ -226,7 +228,7 @@ p {
     }
 
     .result {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #444;
     }
   }

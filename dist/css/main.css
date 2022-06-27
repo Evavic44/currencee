@@ -15,11 +15,12 @@
 body {
   font-family: "Inter", sans-serif;
   background: #e5e9fe;
+  color: #222;
 }
 
 p {
   font-weight: 300;
-  color: #222;
+  color: #555;
 }
 
 .highlight {
@@ -118,7 +119,7 @@ p {
 .converter form {
   background: white;
   border-radius: 5px;
-  box-shadow: -220px 60px 200px -100px rgba(136, 150, 206, 0.7);
+  box-shadow: -220px 60px 250px -100px rgba(136, 150, 206, 0.7);
 }
 .converter form label {
   display: block;
@@ -147,6 +148,7 @@ p {
   font-size: 1.5rem;
   border: 1px solid #eaeaea;
   border-radius: 5px;
+  color: #333;
 }
 .converter form .value input:focus {
   border: 1px solid #8896ce;
@@ -206,7 +208,7 @@ p {
   margin-bottom: 0.3rem;
 }
 .converter .exchangeRate .result {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #444;
 }
 .converter .convertBtn {

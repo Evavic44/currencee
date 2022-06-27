@@ -1,14 +1,15 @@
 // Add preffered country to the object
 
 let country_code = {
-  USD: "US",
-  GBP: "GB",
-  EUR: "EUR",
-  NGN: "NG",
-  INR: "IN",
-  JPY: "JP",
-  CNY: "CN",
-  GHS: "GH",
+  USD: "us",
+  GBP: "gb",
+  EUR: "eu",
+  NGN: "ng",
+  INR: "in",
+  JPY: "jp",
+  CNY: "cn",
+  GHS: "gh",
+  AUD: "au",
 };
 
 /*
