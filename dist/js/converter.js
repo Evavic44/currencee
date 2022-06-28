@@ -88,6 +88,6 @@ function getExchangeRate() {
       exchangeRateText.innerText = `${totalExchangeRate} ${foreign.value}`; // 414.27 NGN
     })
     .catch(() => {
-      exchangeRateText.innerText = "Network Error";
+      exchangeRateText.innerText = "Error ⛔";
     });
 }
