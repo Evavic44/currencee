@@ -1,4 +1,4 @@
 ## Contributing guidelines
 
 
-![Currencee](https://user-images.githubusercontent.com/62628408/175951094-a1ed7862-dd21-4f84-b540-e4ffa0576e0f.jpg)
+![Currencee](https://user-images.githubusercontent.com/62628408/176226008-c9554ab2-e812-402e-b040-e45ee7fee9e2.png)
