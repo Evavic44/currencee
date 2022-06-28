@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/62628408/176181956-fc06170c-a6c5-4142-85e7-ecb5a45b6c18.png">
+<img src="https://user-images.githubusercontent.com/62628408/176181956-fc06170c-a6c5-4142-85e7-ecb5a45b6c18.png" width="600px">
 </div> <br>
 
 <img src="https://user-images.githubusercontent.com/62628408/176175476-3e22d60d-b405-4f99-99d9-0de4a4f71a8a.png" alt="Rocketmeme Preview">
