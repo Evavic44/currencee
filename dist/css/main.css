@@ -44,7 +44,7 @@ a {
 }
 @media (max-width: 768px) {
   #hero {
-    padding: 0 2rem 3rem;
+    padding: 0 1.5rem 3rem;
   }
 }
 
@@ -80,7 +80,7 @@ a {
   font-size: 0.8rem;
 }
 .content .stats .rating {
-  margin-right: 10rem;
+  margin-right: 6rem;
 }
 @media (max-width: 1100px) {
   .content h1 {
@@ -200,6 +200,14 @@ a {
 .converter .convertOptions .selectContanier .flags {
   border-radius: 50%;
   margin-right: 1rem;
+}
+@media (max-width: 600px) {
+  .converter .convertOptions {
+    flex-direction: column;
+  }
+  .converter .convertOptions .convertIcon {
+    margin: 1rem 0;
+  }
 }
 .converter .exchangeRate {
   padding: 1.3rem 1.5rem;
