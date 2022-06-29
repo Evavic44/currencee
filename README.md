@@ -11,6 +11,10 @@
 <img src="https://user-images.githubusercontent.com/62628408/176181956-fc06170c-a6c5-4142-85e7-ecb5a45b6c18.png" width="600px">
 </div> <br>
 
+<div align="center">
+<a href="https://www.producthunt.com/posts/currencee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-currencee" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351079&theme=light" alt="Currencee - Trusted&#0044;&#0032;fast&#0032;and&#0032;secure&#0032;currency&#0032;converter | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</div><br>
+
 <img src="https://user-images.githubusercontent.com/62628408/176175476-3e22d60d-b405-4f99-99d9-0de4a4f71a8a.png" alt="Rocketmeme Preview">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f7c5c576-f1b4-40f9-ba1b-6a39ec0ffa1d/deploy-status)](https://app.netlify.com/sites/currencee/deploys)
