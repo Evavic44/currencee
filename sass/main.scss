@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 *,
 *::before,
@@ -69,8 +70,7 @@ a {
   }
 
   .stats {
-    display: flex;
-    align-items: center;
+    @include flexAlign;
 
     h2 {
       font-size: 2rem;
@@ -94,7 +94,6 @@ a {
 
   @media (max-width: 1000px) {
     h1 {
-      font-size: 2.7rem;
       line-height: 3.2rem;
       max-width: 800px;
     }
@@ -140,12 +139,10 @@ a {
 
     .value {
       padding: 2rem;
-      border-bottom: 1px solid #f4f4f4;
+      border-bottom: $borderLine;
 
       & > div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flexBetween;
 
         a {
           transform: translateY(-7px);
@@ -170,11 +167,9 @@ a {
   }
 
   .convertOptions {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flexAround;
     padding: 1.5rem;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: $borderLine;
 
     .baseCurrency,
     .foreignCurrency {
@@ -187,9 +182,7 @@ a {
     }
 
     .selectContanier {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      @include flexEvenly;
       border: 1px solid $inputColor;
       border-radius: 200px;
       padding: 0.2rem;
@@ -266,10 +259,7 @@ a {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   text-align: center;
   padding-bottom: 3rem;
   font-size: 1.1rem;
