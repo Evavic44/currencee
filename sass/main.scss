@@ -94,7 +94,6 @@ a {
 
   @media (max-width: 1000px) {
     h1 {
-      font-size: 2.7rem;
       line-height: 3.2rem;
       max-width: 800px;
     }
@@ -140,7 +139,7 @@ a {
 
     .value {
       padding: 2rem;
-      border-bottom: 1px solid #f4f4f4;
+      border-bottom: $borderLine;
 
       & > div {
         @include flexBetween;
@@ -170,7 +169,7 @@ a {
   .convertOptions {
     @include flexAround;
     padding: 1.5rem;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: $borderLine;
 
     .baseCurrency,
     .foreignCurrency {
