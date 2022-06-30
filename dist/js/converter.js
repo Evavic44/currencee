@@ -83,7 +83,7 @@ function getExchangeRate() {
     .then((response) => response.json())
     .then((result) => {
       let exchangeRate = result.conversion_rates[foreign.value];
-      let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+      let totalExchangeRate = (amountVal * exchangeRate).toLocaleString();
       const exchangeRateText = document.querySelector(".result");
       // exchangeRateText.innerText = `${amountVal} ${base.value} = ${totalExchangeRate} ${foreign.value}`; // 1 USD = 414.27 NGN
       exchangeRateText.innerText = `${totalExchangeRate} ${foreign.value}`; // 414.27 NGN
