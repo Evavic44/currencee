@@ -2,6 +2,7 @@
   font-family: "Canela Deck";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url(../assets/font/CanelaDeck.woff2);
 }
 *,
