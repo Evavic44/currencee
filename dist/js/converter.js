@@ -77,7 +77,7 @@ function getExchangeRate() {
   }
 
   // Loading Icon
-  exchangeRateText.innerText = `Converting..`;
+  exchangeRateText.innerHTML = `<span class="loader"></span>`;
   let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${base.value}`;
   fetch(url)
     .then((response) => response.json())
