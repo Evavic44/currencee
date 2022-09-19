@@ -7,10 +7,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $fontPrimary;
 }
 
 body {
-  font-family: $fontSecondary;
   background: $bgLight;
   color: $textDark;
 }
@@ -30,7 +30,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem 3rem;
+  padding: 6rem 3rem;
   margin-top: -1rem;
 
   @media (max-width: 1000px) {
@@ -45,9 +45,7 @@ a {
 
 // Hero Content
 .content {
-  opacity: 0;
   h1 {
-    font-family: $fontPrimary;
     font-size: 2.6rem;
     letter-spacing: -0.3px;
     line-height: 3.5rem;
@@ -62,7 +60,7 @@ a {
   }
 
   .logo {
-    margin-bottom: 2.7rem;
+    margin-bottom: 1rem;
   }
 
   .icon {
@@ -70,6 +68,7 @@ a {
   }
 
   .stats {
+    margin: 1.5rem 0;
     @include flexAlign;
 
     h2 {
@@ -110,7 +109,7 @@ a {
 
 // Converter
 .converter {
-  padding: 6rem 2rem;
+  padding: 2rem;
   width: 550px;
 
   @media (max-width: 1000px) {
@@ -133,7 +132,6 @@ a {
 
     input,
     select {
-      font-family: $fontSecondary;
       background-color: $white;
     }
 
@@ -238,7 +236,6 @@ a {
   }
 
   .convertBtn {
-    font-family: $fontPrimary;
     display: inline-block;
     width: 100%;
     padding: 1.2rem;
