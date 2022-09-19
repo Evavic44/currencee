@@ -1,5 +1,5 @@
-// GSAP Animation
-gsap.to(".content", { duration: 3, y: 50, opacity: "1", ease: "expo.out" });
+// // GSAP Animation
+// gsap.to(".content", { duration: 3, y: 50, opacity: "1", ease: "expo.out" });
 // gsap.to(".converter", {
 //   duration: 2,
 //   y: 50,
@@ -7,18 +7,17 @@ gsap.to(".content", { duration: 3, y: 50, opacity: "1", ease: "expo.out" });
 //   delay: "-1",
 //   ease: "expo.out",
 // });
-gsap.to(".logo", {
-  duration: 2,
-  y: 30,
-  delay: "-1",
-  ease: "bounce",
-});
+// gsap.to(".logo", {
+//   duration: 2,
+//   y: 30,
+//   delay: "-1",
+//   ease: "bounce",
+// });
 
 const convertOptions = document.querySelectorAll(".convertOptions select");
 base = document.querySelector(".baseCurrency select");
 foreign = document.querySelector(".foreignCurrency select");
 getButton = document.querySelector("form button");
-// const apiKey = SECRET_API_KEY;
 const apiKey = "453b43b410f75e41ff0c1b15";
 
 for (let i = 0; i < convertOptions.length; i++) {
