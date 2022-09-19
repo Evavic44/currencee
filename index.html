@@ -98,7 +98,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-WC1654Y26N");
+      gtag("config", "G-WC1654Y26N", { cookie_flags: "SameSite=None;Secure" });
     </script>
 
     <!-- CDN -->
@@ -116,8 +116,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
 
     <!-- CSS -->
-    
-    <link rel="stylesheet" href="/assets/index.8f70467f.css">
+    <link rel="stylesheet" href="scss/style.scss" />
   </head>
   <body>
     <header id="hero">
@@ -242,8 +241,7 @@
     <script>
       0;
     </script>
-    <script type="text/javascript" src="config.js"></script>
-    <script src="countries.js" async></script>
-    <script src="converter.js" async></script>
+    <script src="countries.js"></script>
+    <script src="converter.js"></script>
   </body>
 </html>

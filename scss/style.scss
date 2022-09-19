@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: $fontSecondary;
+  font-family: $fontPrimary;
   background: $bgLight;
   color: $textDark;
 }
@@ -47,9 +47,8 @@ a {
 .content {
   opacity: 0;
   h1 {
-    font-family: $fontPrimary;
-    font-size: 2.6rem;
-    letter-spacing: -0.3px;
+    font-size: 2.4rem;
+    letter-spacing: -1px;
     line-height: 3.5rem;
     max-width: 500px;
     margin-bottom: 1.5rem;
@@ -133,8 +132,8 @@ a {
 
     input,
     select {
-      font-family: $fontSecondary;
       background-color: $white;
+      font-family: $fontPrimary;
     }
 
     .value {
