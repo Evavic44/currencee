@@ -1,23 +1,15 @@
 {
   "name": "currencee",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">\r <a href=\"https://curencee.netlify.app\"><img src=\"https://user-images.githubusercontent.com/62628408/175771392-c4d43488-04ac-4253-85ac-4c58a87315bc.svg\" alt=\"logo\" width=\"80px\"></a>  \r </div>",
-  "main": "index.js",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Evavic44/currencee.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Evavic44/currencee/issues"
-  },
-  "homepage": "https://github.com/Evavic44/currencee#readme",
-  "dependencies": {
-    "dotenv": "^16.0.1"
+  "devDependencies": {
+    "sass": "^1.54.9",
+    "vite": "^3.1.0"
   }
 }

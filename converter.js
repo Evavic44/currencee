@@ -18,8 +18,6 @@ const convertOptions = document.querySelectorAll(".convertOptions select");
 base = document.querySelector(".baseCurrency select");
 foreign = document.querySelector(".foreignCurrency select");
 getButton = document.querySelector("form button");
-// const apiKey = SECRET_API_KEY;
-const apiKey = "453b43b410f75e41ff0c1b15";
 
 for (let i = 0; i < convertOptions.length; i++) {
   for (currency_code in country_code) {
@@ -66,6 +64,7 @@ exchangeIcon.addEventListener("click", () => {
   getExchangeRate();
 });
 
+const key = "453b43b410f75e41ff0c1b15";
 function getExchangeRate() {
   const amount = document.querySelector(".value input"),
     exchangeRateText = document.querySelector(".result");
@@ -78,7 +77,7 @@ function getExchangeRate() {
 
   // Loading Icon
   exchangeRateText.innerHTML = `<span class="loader"></span>`;
-  let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${base.value}`;
+  let url = `https://v6.exchangerate-api.com/v6/${key}/latest/${base.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {

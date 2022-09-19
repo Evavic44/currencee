@@ -51,6 +51,17 @@ https://flagcdn.com/h20/ng.png
 - [Fontawesome](https://fontawesome.com) for icons
 - [GSAP](https://greensock.com/gsap/) for animation
 
+## Run project locally
+```js
+git clone https://github.com/Evavic44/currencee.git
+
+cd currencee
+npm install
+npm run dev
+
+visit http://127.0.0.1:5173/  
+```
+
 ## 🔐 License
 This project is protected by <a href="https://github.com/Evavic44/curencee/blob/main/LICENSE">MIT License</a>.
 If you like this project, kindly star ⭐ and share this project.
