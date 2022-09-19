@@ -1,5 +1,4 @@
-// Add preffered country to the object:
-//? Keys(Currency code) should be in uppercase and value(country) in lowercase
+// Add preffered country to the object
 
 let country_code = {
   USD: "us",
@@ -11,12 +10,14 @@ let country_code = {
   CNY: "cn",
   GHS: "gh",
   AUD: "au",
-  AED: "ae",
-  AUD: "au",
-  CAD: "ca",
 };
 
+/*
+Good evening everyone, I just want to apologize for the fact that we only reach out when we have a need, the fact is, you people are all we have. please even if we can raise a quater of that amount (116,000), we can convince the landlord to be patient. Rest assured this is the last time we'll struggle to pay this rent. This is both a promise and a prayer.
+*/
+
 // let country_code = {
+//   AED: "AE",
 //   AFN: "AF",
 //   XCD: "AG",
 //   ALL: "AL",
@@ -25,6 +26,7 @@ let country_code = {
 //   AOA: "AO",
 //   AQD: "AQ",
 //   ARS: "AR",
+//   AUD: "AU",
 //   AZN: "AZ",
 //   BAM: "BA",
 //   BBD: "BB",
@@ -42,6 +44,7 @@ let country_code = {
 //   BWP: "BW",
 //   BYR: "BY",
 //   BZD: "BZ",
+//   CAD: "CA",
 //   CDF: "CD",
 //   XAF: "CF",
 //   CHF: "CH",
