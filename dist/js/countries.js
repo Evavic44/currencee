@@ -12,10 +12,6 @@ let country_code = {
   AUD: "au",
 };
 
-/*
-Good evening everyone, I just want to apologize for the fact that we only reach out when we have a need, the fact is, you people are all we have. please even if we can raise a quater of that amount (116,000), we can convince the landlord to be patient. Rest assured this is the last time we'll struggle to pay this rent. This is both a promise and a prayer.
-*/
-
 // let country_code = {
 //   AED: "AE",
 //   AFN: "AF",
