@@ -1,0 +1,11 @@
+.status {
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 0.6rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}

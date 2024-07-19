@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.description {
+  max-width: 350px;
+  color: var(--text-secondary);
+}

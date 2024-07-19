@@ -1,0 +1,11 @@
+.converter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 30px;
+  padding: 4rem 6rem;
+}

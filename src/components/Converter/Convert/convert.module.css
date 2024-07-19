@@ -1,0 +1,14 @@
+.convert {
+  flex-basis: 50%;
+}
+
+.formGroup .label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.formGroup input {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  border-radius: 50px;
+}
