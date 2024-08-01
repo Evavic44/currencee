@@ -17,7 +17,7 @@ export default function ApiStatus() {
           backgroundColor: code.good,
         }}
       ></div>
-      Status
+      API Usage
     </div>
   );
 }

@@ -49,6 +49,7 @@ export default function ThemeSwitch() {
       <span>Theme:</span> <p>{theme.at(0).toUpperCase() + theme.slice(1)}</p>
       <button
         onClick={toggleTheme}
+        aria-label={theme + " mode"}
         className={`${styles.button} ${theme === "light" && styles.rotate}`}
       >
         {theme === "dark" ? <MoonIcon /> : <SunIcon />}

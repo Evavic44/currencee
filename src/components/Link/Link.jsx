@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import styles from "./link.module.css";
 import ExternalIcon from "../../assets/icons/external.svg?react";
 
-export default function Link({ url, target, children }) {
+export default function Link({ href, target = "_blank", children }) {
   return (
     <a
       className={styles.link}
-      href={url + "?ref=currencee.com"}
+      href={href + "?ref=currencee.com"}
       target={target}
     >
       {children}
@@ -16,7 +16,7 @@ export default function Link({ url, target, children }) {
 }
 
 Link.propTypes = {
-  url: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   target: PropTypes.string,
   children: PropTypes.node.isRequired || PropTypes.string.isRequired,
 };
