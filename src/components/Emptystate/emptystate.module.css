@@ -17,3 +17,9 @@
   margin-bottom: 0.2rem;
   color: var(--text-secondary);
 }
+
+@media (width <= 500px) {
+  .emptystate {
+    height: 100dvh;
+  }
+}

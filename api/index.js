@@ -1,18 +1,21 @@
-/* eslint-disable no-undef */
-const PORT = 8000;
-const express = require("express");
-const cors = require("cors");
+import { createRequire } from "module";
+import express from "express";
+import cors from "cors";
+const require = createRequire(import.meta.url);
 require("dotenv").config();
+
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
+// Enable cors
 app.use(cors());
 
 app.get("/", (req, res) => {
   res.json("💲Currencee API Running...");
 });
 
-// API request to handle list of currencies
+// API request to handle list of currenciesz
 app.get("/currency", (req, res) => {
   (async function getCurrencies() {
     try {
