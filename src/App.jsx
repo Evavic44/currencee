@@ -24,6 +24,11 @@ const initialcurrency = [
   },
 ];
 
+const APP_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:8000"
+    : import.meta.env.VITE_PRODUCTION_URL;
+
 export default function App() {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
@@ -39,11 +44,7 @@ export default function App() {
   useEffect(() => {
     async function getCurrencies() {
       try {
-        const res = await fetch(
-          `https://api.currencybeacon.com/v1/currencies?api_key=${
-            import.meta.env.VITE_API_KEY
-          }`
-        );
+        const res = await fetch(`${APP_URL}/currency`);
 
         if (!res.ok) {
           throw new Error("Error Fetching Data ⛔");
@@ -87,15 +88,13 @@ export default function App() {
       const base = baseCurrency.short_code.toUpperCase();
       const foreign = foreignCurrency.short_code.toUpperCase();
       const res = await fetch(
-        `https://api.currencybeacon.com/v1/convert?api_key=${
-          import.meta.env.VITE_API_KEY
-        }&from=${base}&to=${foreign}&amount=${amount}`
+        `${APP_URL}/convert?base=${base}&foreign=${foreign}&amount=${amount}`
       );
       if (!res.ok) {
         throw new Error("Conversion Failed ⛔");
       }
       const conversion = await res.json();
-      setResult(conversion.response);
+      setResult(conversion);
       setLoading(false);
     } catch (error) {
       console.log("Conversion Failed:", error);
@@ -114,7 +113,7 @@ export default function App() {
 
   // update title when conversion is performed
   useEffect(() => {
-    if (!result.from || !result.to) return;
+    if (!result?.from || !result?.to) return;
 
     document.title = `${Number(
       amount

@@ -20,17 +20,40 @@
 
 - First generate your own API keys from [Currencybeacon](https://currencybeacon.com)
 - Fork and clone the project to your machine.
-- Rename `.env.example` to `.env.local`
-- Set `VITE_API_KEY` to your own keys
+- Rename `.env.example` to `.env`
+- Set `API_KEY` to your own API credentials
+- Set `PRODUCTION_URL` to your site's URL (Only relevant for production)
+- Run the commands below
 
 ```sh
 npm install
+# First start the API server
+npm run server
+
+# Run development server on a separate terminal
 npm run dev
 ```
 
 Now you can visit [localhost:5173](http://localhost:5173) to see the project live.
 
-[*NOTE*]
+## Server
+
+This project utilizes an Express backend to hide the API credentials. To view the API in production, follow the steps below:
+
+- If the API server is already running, skip to the next step, if not, run `npm run server` to start the API server
+- Visit [localhost:8000/currency](http://localhost:8000/currency) to see the currency list
+- Visit [localhost:8000/convert](http://localhost:8000/convert) to perform a conversion
+
+> [!IMPORTANT]
+> The convert endpoint takes in three parameters, a base currency code `base`, a foreign currency code `foreign`, and the `amount` you would like to convert.
+
+Example endpoint
+
+```
+http://localhost:8000/convert?base=USD&foreign=NGN&amount=1
+```
+
+This should return an object that contains the conversion details.
 
 > If you notice any bugs or errors, kindly raise an issue to discuss it. Contributions are also welcome.
 

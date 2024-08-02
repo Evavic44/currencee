@@ -46,7 +46,7 @@ export default function Result({
               {!tooHigh && (
                 <>
                   <div>{foreignCurrency.symbol}</div>
-                  <div>{getResult(result.value)}</div>
+                  <div>{result ? getResult(result.value) : 0}</div>
                 </>
               )}
               {tooHigh && "Too high 🌚"}
