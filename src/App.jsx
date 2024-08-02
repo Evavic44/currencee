@@ -24,11 +24,6 @@ const initialcurrency = [
   },
 ];
 
-const APP_URL =
-  import.meta.env.MODE === "development"
-    ? "http://localhost:8000"
-    : import.meta.env.VITE_PRODUCTION_URL;
-
 export default function App() {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
@@ -44,7 +39,7 @@ export default function App() {
   useEffect(() => {
     async function getCurrencies() {
       try {
-        const res = await fetch(`${APP_URL}/currency`);
+        const res = await fetch("/api/currency");
 
         if (!res.ok) {
           throw new Error("Error Fetching Data ⛔");
@@ -88,7 +83,7 @@ export default function App() {
       const base = baseCurrency.short_code.toUpperCase();
       const foreign = foreignCurrency.short_code.toUpperCase();
       const res = await fetch(
-        `${APP_URL}/convert?base=${base}&foreign=${foreign}&amount=${amount}`
+        `/api/convert?base=${base}&foreign=${foreign}&amount=${amount}`
       );
       if (!res.ok) {
         throw new Error("Conversion Failed ⛔");
