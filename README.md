@@ -14,33 +14,40 @@
 <a href="https://www.producthunt.com/posts/currencee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-currencee" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351079&theme=light" alt="Currencee - Trusted | Product Hunt" style="width: 190px; height: 54px;" width="250" height="54" /></a>
 </div><br>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f7c5c576-f1b4-40f9-ba1b-6a39ec0ffa1d/deploy-status)](https://app.netlify.com/sites/currencee/deploys)
-
 ## Run project locally
 
-- First generate your own API keys from [Currencybeacon](https://currencybeacon.com)
+This project utilizes a simple nodejs express backend which is hosted on Vercel to hide the API credentials. To run the project locally, follow the steps below:
+
+- First generate your own API keys from [Currencybeacon](https://currencybeacon.com?ref=https://currencee.pro)
 - Fork and clone the project to your machine.
+- Rename `.env.example` in the `server` directory to `.env`
+- Insert your API keys
+- Run the commands below
+
+```
+npm install
+npm start
+```
+
+This should start the backend server on [localhost:5000](http://localhost:5000)
+
+## Vite App
+
+With the server running, you can now run the converter locally,
+
 - Rename `.env.example` to `.env`
-- Set `API_KEY` to your own API credentials
-- Set `PRODUCTION_URL` to your site's URL (Only relevant for production)
+- Set `VITE_API_URL` to the hosted backend URL (Only relevant for production)
 - Run the commands below
 
 ```sh
 npm install
-# First start the API server
-npm run server
-
-# Run development server on a separate terminal
 npm run dev
 ```
 
 Now you can visit [localhost:5173](http://localhost:5173) to see the project live.
 
-## Server
+## Server Endpoints
 
-This project utilizes an Express backend to hide the API credentials. To view the API in production, follow the steps below:
-
-- If the API server is already running, skip to the next step, if not, run `npm run server` to start the API server
 - Visit [localhost:8000/currency](http://localhost:8000/currency) to see the currency list
 - Visit [localhost:8000/convert](http://localhost:8000/convert) to perform a conversion
 
@@ -62,7 +69,3 @@ This should return an object that contains the conversion details.
 The converter is powered by the [CurrencyBecacon API](https://currencybeacon.com), which supports over 161 commonly circulating world currencies listed [here](https://currencybeacon.com/supported-currencies). These cover 99% of all UN recognized states and territories.
 
 The flags used are embedded using [Flagcdn](https://flagcdn.com/) which offers countries images based on their code.
-
-<a href="https://www.buymeacoffee.com/victoreke">
-  <img width="140px" alt="bmc-button" src="https://user-images.githubusercontent.com/62628408/127788747-8850d386-fc61-4fff-b18f-8c5ee597be34.png">
-</a>
