@@ -1,79 +1,68 @@
 <div align="center">
-<a href="https://curencee.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/175771392-c4d43488-04ac-4253-85ac-4c58a87315bc.svg" alt="logo" width="80px"></a>  
+<a href="https://curencee.pro"><img src="public/logo.png" alt="logo" width="40px"></a>  
 </div>
 
 <div align="center">
 <h1>Currencee</h1>
-<p>💲 The world's most trusted, fast and secure currency converter app</p> 
+<p>The World's Most Trusted, Fast and Secure Currency Converter</p> 
 </div>
 
-<div align="center">
-<img src="https://user-images.githubusercontent.com/62628408/176181956-fc06170c-a6c5-4142-85e7-ecb5a45b6c18.png" width="600px">
-</div> <br>
+<img src="https://res.cloudinary.com/victoreke/image/upload/v1722546085/currencee/cover.png">
 
+<br />
 <div align="center">
-<a href="https://www.producthunt.com/posts/currencee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-currencee" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351079&theme=light" alt="Currencee - Trusted&#0044;&#0032;fast&#0032;and&#0032;secure&#0032;currency&#0032;converter | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://www.producthunt.com/posts/currencee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-currencee" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=351079&theme=light" alt="Currencee - Trusted | Product Hunt" style="width: 190px; height: 54px;" width="250" height="54" /></a>
 </div><br>
-
-<img src="https://user-images.githubusercontent.com/62628408/176175476-3e22d60d-b405-4f99-99d9-0de4a4f71a8a.png" alt="Rocketmeme Preview">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f7c5c576-f1b4-40f9-ba1b-6a39ec0ffa1d/deploy-status)](https://app.netlify.com/sites/currencee/deploys)
 
 ## Run project locally
 
-Styling is done using sass. Make sure you run the command below to enable sass watch for changes and compile them to the `.css` file
+- First generate your own API keys from [Currencybeacon](https://currencybeacon.com)
+- Fork and clone the project to your machine.
+- Rename `.env.example` to `.env`
+- Set `API_KEY` to your own API credentials
+- Set `PRODUCTION_URL` to your site's URL (Only relevant for production)
+- Run the commands below
 
-```bash
-sass --watch scss:dist/css
+```sh
+npm install
+# First start the API server
+npm run server
+
+# Run development server on a separate terminal
+npm run dev
 ```
 
-Currencee is a simple app built using HTML and JavaScript. Styling is done using SASS.
-To run the project locally, simply fork and clone the project to your machine, then run the index.html file using liver server.
+Now you can visit [localhost:5173](http://localhost:5173) to see the project live.
 
-The converter is powered by the <a href="https://www.exchangerate-api.com/">Exchange Rate API</a>, which supports over 161 commonly circulating world currencies listed <a href="https://www.exchangerate-api.com/docs/supported-currencies">here</a>. These cover 99% of all UN recognized states and territories. The API offers 1500 requests per month for free.
+## Server
 
-Countries are stored in a JavaScript object. These are the available countries. To add more, use the currency code as the element name and country intial for the object element value.
+This project utilizes an Express backend to hide the API credentials. To view the API in production, follow the steps below:
 
-```js
-let country_code = {
-  USD: "us",
-  GBP: "gb",
-  EUR: "eu",
-  NGN: "ng",
-  INR: "in",
-  JPY: "jp",
-  CNY: "cn",
-  GHS: "gh",
-  AUD: "au",
-};
+- If the API server is already running, skip to the next step, if not, run `npm run server` to start the API server
+- Visit [localhost:8000/currency](http://localhost:8000/currency) to see the currency list
+- Visit [localhost:8000/convert](http://localhost:8000/convert) to perform a conversion
+
+> [!IMPORTANT]
+> The convert endpoint takes in three parameters, a base currency code `base`, a foreign currency code `foreign`, and the `amount` you would like to convert.
+
+Example endpoint
+
+```
+http://localhost:8000/convert?base=USD&foreign=NGN&amount=1
 ```
 
-The flags used are embedded using <a href="https://flagpedia.net">Flagpedia</a> which offers countries images based on their code.
+This should return an object that contains the conversion details.
 
-```js
-https://flagcdn.com/h20/ng.png
-```
+> If you notice any bugs or errors, kindly raise an issue to discuss it. Contributions are also welcome.
 
-- [Google Analytics](https://analytics.google.com) to measure metrics and usage.
-- [Google font](https://fonts.google.com/)
-- [Fontawesome](https://fontawesome.com) for icons
-- [GSAP](https://greensock.com/gsap/) for animation
+## Attribution
 
-## 🔐 License
+The converter is powered by the [CurrencyBecacon API](https://currencybeacon.com), which supports over 161 commonly circulating world currencies listed [here](https://currencybeacon.com/supported-currencies). These cover 99% of all UN recognized states and territories.
 
-This project is protected by <a href="https://github.com/Evavic44/curencee/blob/main/LICENSE">MIT License</a>.
-If you like this project, kindly star ⭐ and share this project.
+The flags used are embedded using [Flagcdn](https://flagcdn.com/) which offers countries images based on their code.
 
-<a href="https://www.buymeacoffee.com/evavic44">
-  <img width="150px" alt="bmc-button" src="https://user-images.githubusercontent.com/62628408/127788747-8850d386-fc61-4fff-b18f-8c5ee597be34.png">
+<a href="https://www.buymeacoffee.com/victoreke">
+  <img width="140px" alt="bmc-button" src="https://user-images.githubusercontent.com/62628408/127788747-8850d386-fc61-4fff-b18f-8c5ee597be34.png">
 </a>
-
-# Color Code
-
-| Color           | Hex                                                                                                               | Code      |
-| --------------- | ----------------------------------------------------------------------------------------------------------------- | --------- |
-| Primary color   | ![#8896CE](https://user-images.githubusercontent.com/62628408/176185657-5ae625c0-c7d3-4f85-815d-769c7a69045c.png) | `#8896CE` |
-| Secondary color | ![#191136](https://user-images.githubusercontent.com/62628408/176185659-787210c1-fac9-4e87-8e6a-96b36ef53e0f.png) | `#191136` |
-| Accent color    | ![#E5E9FE](https://user-images.githubusercontent.com/62628408/176185662-c471c6e7-97fc-4c60-afea-1574ab64216f.png) | `#E5E9FE` |
-| Bg Dark         | ![#000000](https://user-images.githubusercontent.com/62628408/176185645-615c74cd-a2af-4ee3-bda8-f5982fe06011.png) | `#000000` |
-| Bg Light        | ![#FFFFFF](https://user-images.githubusercontent.com/62628408/176185668-57712bfb-3d6f-4a5e-81e6-140de0004395.png) | `#FFFFFF` |

@@ -1,0 +1,110 @@
+.convert {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  max-width: 45%;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+}
+
+.formGroup .label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--text-secondary);
+}
+
+.formGroup .input {
+  border: 1px solid var(--border);
+  padding: 1rem 1rem 1rem 2.8rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.formGroup .input:focus {
+  border-color: var(--secondary-color);
+  outline-color: var(--secondary-color);
+}
+
+.formGroup .input::placeholder {
+  color: var(--text-secondary);
+}
+
+.formGroup .inputContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.formGroup .inputContainer .symbol {
+  color: var(--primary-color);
+  font-size: 18px;
+  position: absolute;
+  left: 15px;
+}
+
+.formGroup .inputContainer .symbol::selection {
+  background-color: none;
+}
+
+.swapbtn,
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swapbtn .line {
+  background: var(--border);
+  width: 100%;
+  height: 1px;
+}
+
+.convertbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  gap: 0.4rem;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.convertbtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.convertbtn:disabled {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  opacity: 70%;
+  cursor: not-allowed;
+}
+
+@media (width <= 800px) {
+  .convert {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (width <= 800px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    input {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+:root {
+  font-weight: 400;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --font-primary: "Work Sans", system-ui, sans-serif;
+  --font-secondary: "Martian Mono", monospace;
+  --primary-color: #5b3cfa;
+  --secondary-color: #7863fc;
+}
+
+body {
+  font-family: inherit;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f9f9f9;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-accent: #bac8d3;
+  --border: #dddddd;
+  --shadow: rgba(78, 73, 60, 0.12) 0px 48px 150px 0px;
+}
+
+.dark {
+  --bg-primary: #111111;
+  --bg-secondary: #171717;
+  --bg-tertiary: #151515;
+  --text-primary: #ffffff;
+  --text-secondary: #999999;
+  --text-accent: #32373b;
+  --border: #252525;
+  --shadow: rgba(0, 0, 0, 0.12) 0px 0px 80px 0px;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 5rem auto 0;
+  padding: 1.5rem;
+}
+
+@media (width <= 500px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: var(--font-secondary);
+}
+
+.btn {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.btn:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Remove default number increment arrows */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+}

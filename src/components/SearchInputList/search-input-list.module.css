@@ -1,0 +1,12 @@
+.searchinputlist {
+  background-color: var(--bg-primary);
+  position: absolute;
+  top: 70px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  width: 100%;
+  height: 215px;
+  overflow-y: scroll;
+  z-index: 99999;
+}

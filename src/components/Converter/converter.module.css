@@ -1,0 +1,22 @@
+.converter {
+  display: flex;
+  flex-basis: 100%;
+  gap: 1.5rem 4rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  padding: 4rem 6rem;
+}
+
+@media (width <= 1000px) {
+  .converter {
+    padding: 1.5rem;
+    gap: 1.5rem 2rem;
+  }
+}
+
+@media (width <= 800px) {
+  .converter {
+    flex-direction: column;
+  }
+}

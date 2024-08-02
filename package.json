@@ -1,23 +1,33 @@
 {
   "name": "currencee",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">\r <a href=\"https://curencee.netlify.app\"><img src=\"https://user-images.githubusercontent.com/62628408/175771392-c4d43488-04ac-4253-85ac-4c58a87315bc.svg\" alt=\"logo\" width=\"80px\"></a>  \r </div>",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "server": "nodemon server.cjs",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Evavic44/currencee.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Evavic44/currencee/issues"
-  },
-  "homepage": "https://github.com/Evavic44/currencee#readme",
   "dependencies": {
-    "dotenv": "^16.0.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite-plugin-commonjs": "^0.10.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.4",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }
