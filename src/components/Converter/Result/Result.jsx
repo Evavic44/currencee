@@ -9,7 +9,7 @@ export default function Result({
   result,
   loading,
 }) {
-  const tooHigh = amount > 100000000000;
+  const tooHigh = amount.length >= 20;
 
   function getResult(value) {
     if (isNaN(value)) return 0;
@@ -49,7 +49,7 @@ export default function Result({
                   <div>{result ? getResult(result.value) : 0}</div>
                 </>
               )}
-              {tooHigh && "Too high 🌚"}
+              {tooHigh && "Too high ⛔"}
             </h2>
           )}
         </div>
