@@ -25,6 +25,7 @@ This project utilizes a simple nodejs express backend which is hosted on Vercel 
 - Run the commands below
 
 ```
+cd server
 npm install
 npm start
 ```
@@ -48,8 +49,8 @@ Now you can visit [localhost:5173](http://localhost:5173) to see the project liv
 
 ## Server Endpoints
 
-- Visit [localhost:8000/currency](http://localhost:8000/currency) to see the currency list
-- Visit [localhost:8000/convert](http://localhost:8000/convert) to perform a conversion
+- Visit [localhost:5000/currency](http://localhost:5000/currency) to see the currency list
+- Visit [localhost:5000/convert](http://localhost:5000/convert) to perform a conversion
 
 > [!IMPORTANT]
 > The convert endpoint takes in three parameters, a base currency code `base`, a foreign currency code `foreign`, and the `amount` you would like to convert.
@@ -57,7 +58,7 @@ Now you can visit [localhost:5173](http://localhost:5173) to see the project liv
 Example endpoint
 
 ```
-http://localhost:8000/convert?base=USD&foreign=NGN&amount=1
+http://localhost:5000/convert?base=USD&foreign=NGN&amount=1
 ```
 
 This should return an object that contains the conversion details.
