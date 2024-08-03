@@ -1,6 +1,5 @@
 .converter {
   display: flex;
-  flex-basis: 100%;
   gap: 1.5rem 4rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -18,5 +17,13 @@
 @media (width <= 800px) {
   .converter {
     flex-direction: column;
+  }
+}
+
+@media (width <= 420px) {
+  .converter {
+    box-shadow: none;
+    border: none;
+    padding: 0;
   }
 }

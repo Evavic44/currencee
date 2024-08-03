@@ -1,8 +1,5 @@
 .convert {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 45%;
-  max-width: 45%;
+  width: 100%;
 }
 
 .formGroup {
@@ -94,13 +91,14 @@
   cursor: not-allowed;
 }
 
-@media (width <= 800px) {
+/* @media (width <= 800px) {
   .convert {
     flex-basis: 100%;
     max-width: 100%;
   }
-}
+} */
 
+/* Prevent input from expanding on Safari */
 @media screen and (width <= 800px) {
   @supports (-webkit-overflow-scrolling: touch) {
     input {

@@ -68,7 +68,7 @@ export default function App() {
 
   // validate amount input
   function handleAmount(e) {
-    if (isInputNum(e.target.value)) {
+    if (isInputNum(e.target.value) && e.target.value.length <= 20) {
       setAmount(e.target.value);
     }
     return;
@@ -118,6 +118,7 @@ export default function App() {
     document.title = `${Number(
       amount
     ).toLocaleString()} ${result?.from.toUpperCase()} to ${result?.to.toUpperCase()} Conversion - Currencee`;
+
     return () => {
       document.title =
         "Currencee | The World's Most Trusted and Secure Currency Conveter";

@@ -1,8 +1,5 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 55%;
-  max-width: 55%;
+  width: 100%;
 }
 
 .resultcontainer {
@@ -38,19 +35,6 @@
   word-wrap: break-word;
 }
 
-@media (width <= 800px) {
-  .container {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-  .resultcontainer {
-    padding: 1rem;
-  }
-  .result h2 {
-    font-size: 1.5rem;
-  }
-}
-
 .spinner {
   animation: spin 0.5s linear infinite;
 }
@@ -68,4 +52,13 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+}
+
+@media (width <= 800px) {
+  .resultcontainer {
+    padding: 1rem;
+  }
+  .result h2 {
+    font-size: 1.5rem;
+  }
 }
