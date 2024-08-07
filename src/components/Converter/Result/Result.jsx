@@ -45,8 +45,10 @@ export default function Result({
             <h2>
               {!tooHigh && (
                 <>
-                  <div>{foreignCurrency.symbol}</div>
-                  <div>{result ? getResult(result.value) : 0}</div>
+                  <div className={styles.symbol}>{foreignCurrency.symbol}</div>
+                  <div className={styles.text}>
+                    {result ? getResult(result.value) : 0}
+                  </div>
                 </>
               )}
               {tooHigh && "Too high ⛔"}
