@@ -12,7 +12,7 @@ export default function Currency({ currency }) {
       {!imageError && (
         <img
           className={styles.flag}
-          src={`https://flagcdn.com/h20/${code}.png`}
+          src={`https://flagcdn.com/h60/${code}.png`}
           width={18}
           height={18}
           alt={name + "flag"}
